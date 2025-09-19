@@ -46,14 +46,14 @@ curl -X POST http://127.0.0.1:8000/books \
   -d '{"title":"Livro X","authors":"A,B","pages":100,"year":2025}'
 
 
-PUT /books/{id} ou PATCH /books/{id} (conforme implementação)
+PUT /books/{id}
 
 Atualiza um livro. Para atualização parcial envie apenas os campos que quer alterar (ex.: {"title":"TesteAtualizado"}).
 Strings vazias são rejeitadas por validação.
 
 Exemplo (parcial):
 
-curl -X PATCH http://127.0.0.1:8000/books/1 \
+curl -X PUT http://127.0.0.1:8000/books/1 \
   -H "Content-Type: application/json" \
   -d '{"title":"Novo Título"}'
 
